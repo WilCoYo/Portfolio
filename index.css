@@ -11,8 +11,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: .6rem;
-    padding-bottom: .6rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    font-size: 1rem;
 }
 
 h1 {
@@ -22,10 +23,49 @@ h1 {
     font-size: 1.2rem;
     padding-top: 2.1rem;
     padding-bottom: 1.5rem;
+    font-weight: lighter;
+    letter-spacing: .2rem;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: .1rem;
+}
 
-header ul { 
+.header span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    padding-left: 8.5rem;
+    padding-top: .1rem;
+}
+
+.header ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-right: 6.5rem;
+    padding-top: .1rem;
+}
+
+.header li {
+    display: inline;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: lighter;
+}
+
+.header li a {
+    text-decoration: none;
+}
+
+nav ul { 
     font-size: 1.1rem;
     list-style-type: none;
     margin: 0;
@@ -36,40 +76,40 @@ header ul {
     padding-bottom: 1rem;
 }
 
-li {
+nav li {
     display: inline;
     text-align: center;
     padding: .5rem;
-    font-weight: bold;
+    font-weight: lighter;
 }
 
 .banner1 {
-    background-image:url("./Resources/Images/Tryonbanner.webp");
+    background-image:url("./Resources/Images/Glasses\ Backdrop\ Banner.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     background-position: right;
     height: 35rem;
-    
+    background-position-y:bottom;
 }
 
 .banner1 h3 {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight:lighter;
-    padding-top: 6%;
-    padding-left: 2%; 
-    padding-bottom: 1%;
+    padding-top: 10%;
+    padding-left: 5%; 
+    padding-bottom: 2%;
 }
 
 .shopbuttons {
-    padding-left: 5%;
+    padding-left: 11%;
     padding-top: 1%;
     
 } 
 
 .shopbuttons .women {
     border: none;
-    border-radius: 1rem;
-    font-size: 1rem;
+    border-radius: 1.75rem;
+    font-size: 1.75rem;
     font-weight: bold;
     padding: .5rem;
     background-color: #006EA5;
@@ -79,8 +119,8 @@ li {
 
 .shopbuttons .men {
     border: none;
-    border-radius: 1rem;
-    font-size: 1rem;
+    border-radius: 1.75rem;
+    font-size: 1.75rem;
     font-weight: bold;
     padding: .5rem;
     background-color: #006EA5;
@@ -96,16 +136,131 @@ li {
 }
 
 
-.bestselling h3 {
+.product-sliding-header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     padding-top: 2.5%;
-    padding-bottom: 0;
+    padding-left: 5%;
+    font-size: 2rem;
 }
 
-/* v Copied code for slider and editted it to fit v */
 
+.p-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.product-sliding-header {
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #313131;
+    text-align: center;
+    
+}
+
+.product-box {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 15px;
+    /*border: 1px solid black;*/
+    border-radius: 10px;
+    margin: 0px 20px;
+    position: relative;
+}
+
+.p-img-container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.p-img a,
+.p-img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.p-img a img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: contain;
+    animation: fade 0.6s;
+}
+
+.p-img-angle {
+    display: none;
+}
+
+.p-img-container:hover .p-img-angle {
+    display: block;
+}
+
+.p-img-container:hover .p-img-front {
+    display: none;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+
+.p-box-text {
+    margin-top: 5px;
+    width: 100%;
+
+}
+
+.product-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-title span{
+    color: black;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+
+.product-title{
+    color: #333333;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.product-title:hover{
+    color: #111111;
+    opacity: .5;
+    transition: all ease .3s;
+}
+
+.product
+
+
+
+
+
+
+
+
+
+/* v Copied code for slider and editted it to fit v */
+/*
 *,
 *:after,
 *:before {
@@ -178,4 +333,6 @@ input[id="radio-2"] {
 }
 
 /* ^Copied Code^ */
+*/
+
 
