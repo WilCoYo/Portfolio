@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./index.css" rel="stylesheet">
+    <!--<script src="/main.js"></script>-->
 </head>
 <body>
     <span id="promo">Save an average of $100 with  <a href=""> vision insurance</a></span>
@@ -35,6 +36,7 @@
             </ul>
         </nav>
     </header>
+
     <div class="banner1">
         <h3>
             Try on 5 frames for free, 
@@ -46,54 +48,131 @@
             <button class="men">Shop Men</button>
         </div>
     </div>
-    
-    <section class="p-slider">
 
-        <!--Heading-->
-        <h3 class="product-sliding-header">Browse bestselling styles</h3>
+    <div class='bestsellingstyles'>
+        <h3>Brown Best-Selling Styles</h3>
+    </div>
+    
         
-        <!--Product Box-->
-        <div class="product-box">
+
+         <!--img container and list-->
+    <div id="carousel" class="carousel">
+        <button class="arrow prev">Prev</button>
+        <div class="gallery">
+            <ul>
+                <li>
+                    <a href="#"><img src="Resources/Images/Gillian2.png" class="gillian-front" alt="Front of Gillian"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="Resources/Images/Durand2.png" class="durand-front" alt="Front of Durand"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="Resources/Images/Baker2.png" alt="Front of Baker"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="Resources/Images/Morgan2.png" alt="Front of Morgan"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="Resources/Images/Watts2.png" alt="Front of Watts"></a>
+                </li>
+                    </ul>
+        </div>
+        <button class="arrow next">Next</button>
+    </div>
+    
+    <div class="palettebanner">
+        <h3>
+            New Arrivals 
+        </h3>
+        <div class="nabutton">
+            <button class="newarrivalsbtn">Shop Here</button>
+        </div>
+    </div>
+
+    <div class="visioninsurance">
+        <span>DID YOU KNOW?</span>
+        <br>
+        <h3>We accept vision insurance!</h3>
+        <span>
+            Save an average of $100 by using your benefits, no matter which insurance carrier you have. 
+            <br>
+            (This may vary by state or plan.)
+        </span>
+        <br>
+        <span>
+            <a href="#">Get the details here</a>
+        </span>
+    </div>
+
+    <div class="giveapair">
+        <h3>Buy a Pair, Give a Pair</h3>
+        <span>
+            For every pair purchased, a pair of glasses is distribute to someone in need. So far,
+            <br>
+            that's 15 million pairs and counting.
+        </span>
+        <br>
+        <span>
+            <a href="#">Learn More</a>
+        </span>
+    </div>
+
+    <div class="charityimgs">
+        <img src="Resources/Images/CharityImg1.png" class="leftimg">
+        <img src="Resources/Images/CharityImg2.png" class="centerimg">
+        <img src="Resources/Images/CharityImg3.png" class="rightimg">
+    </div>
 
 
 
 
+
+
+
+
+
+
+
+
+
+    <script>
+                /* label the images, just for convenience, to visually track them */
+                let i = 1;
+                for(let li of carousel.querySelectorAll('li')) {
+                  li.style.position = 'relative';
+                  li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+                  i++;
+                }
             
-            <!--img container-->
-            <div class="p-img-container">
-                <div class="p-img">
-    
-                    <a href="#">
-                        <img src="Resources/Images/Gillian.png" class="p-img-front" alt="Front of Gillian">
-                        <img src="Resources/Images/GillianAngle.png" class="p-img-angle" alt="Gillian at an Angle">
-
-
-                        <!--<img src="Resources/Images/Durand.png" class="p-img-durand" alt="Front of Durand">
-                        <img src="Resources/Images/Morgan.png" class="p-img-morgan" alt="Front of Morgan">
-                        <img src="Resources/Images/Watts.png" class="p-img-Watts" alt="Front of Watts">
-                        <img src="Resources/Images/Wilkie.png" class="p-img-Wilkie" alt="Front of Wilkie">-->
-                    </a>
-    
-                </div>
-            </div>
-
-            <!--Text-->
-            <div class="p-box-text">
-                
-                <!--Title-->
-                <a href="#" class="product-title">
-                    <span>Gillian</span>
-                </a>
-
+                /* configuration */
+                let width = 335; // image width
+                let count = 3; // visible images count
+            
+                let list = carousel.querySelector('ul');
+                let listElems = carousel.querySelectorAll('li');
+            
+                let position = 0; // ribbon scroll position
+            
+                carousel.querySelector('.prev').onclick = function() {
+                  // shift left
+                  position += width * count;
+                  // can't move to the left too much, end of images
+                  position = Math.min(position, 0)
+                  list.style.marginLeft = position + 'px';
+                };
+            
+                carousel.querySelector('.next').onclick = function() {
+                  // shift right
+                  position -= width * count;
+                  // can only shift the ribbbon for (total ribbon length - visible count) images
+                  position = Math.max(position, -width * (listElems.length - count));
+                  list.style.marginLeft = position + 'px';
+                };
+    </script>
               
 
-        </div>
+      
 
-        
-        
-
-
-    </section>
 
 </body>
 </html>
