@@ -129,210 +129,188 @@ nav li {
 
 .women:hover {
     background-color: #003B7A;
+    cursor: pointer;
 }
 
 .men:hover {
     background-color: #003B7A;
+    cursor: pointer;
 }
 
-
-.product-sliding-header {
+.bestsellingstyles {
     display: flex;
     align-items: center;
     justify-content: left;
-    padding-top: 2.5%;
-    padding-left: 5%;
-    font-size: 2rem;
 }
 
+.bestsellingstyles h3 {
+    padding: 2rem 0 2rem 6rem;
+    font-weight: lighter;
+    font-size: 3rem;
+}
 
-.p-slider {
+.carousel {
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+    height: 30rem;
+  }
+  
+  .carousel img {
+    width: 30rem;
+    height: 25rem;
+    /* make it block to remove space around images */
+    display: block;
+    padding: 0 5rem;
+  }
+  
+  .arrow {
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border: .1rem solid black;
+    border-radius: 50%;
+    font-size: 1rem;
+    line-height: 3rem;
+    display: block;
+  }
+  
+  .arrow:focus {
+    outline: none;
+  }
+  
+  .arrow:hover {
+    cursor: pointer;
+    background-color: #C2C2C2;
+  }
+  
+  .prev {
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+  }
+  
+  .next {
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+  }
+  
+  .gallery {
+    height:40rem;
+    width: 120rem;
+    overflow: hidden;
+  }
+  
+  .gallery ul {
+    height: 8rem;
+    width: 300%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    /* remove white-space between inline-block'ed li */
+    /* http://davidwalsh.name/remove-whitespace-inline-block */
+    font-size: 0;
+  }
+  
+  .gallery li {
+    display: inline-block;
+  }
+
+  .palettebanner {
+    background-image:url("./Resources/Images/Sundbanner.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 35rem;
+    background-position-y:bottom;
+  }
+
+  .palettebanner h3 {
+    font-size: 4rem;
+    font-weight:lighter;
+    padding-top: 10%;
+    padding-left: 5%; 
+    padding-bottom: 2%;
+  }
+
+  .nabutton {
+    padding-left: 5%;
+  }
+
+  .newarrivalsbtn {
+    border: none;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: black;
+    margin-right: 1%;
+  }
+
+  .newarrivalsbtn:hover {
+    color:#003B7A;
+    cursor: pointer;
+  }
+ 
+  .visioninsurance {
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: 50px 0px;
-}
+    width: 100%;
+    height: 35rem;
+    background-color: #DDF1F7;
+    margin-top: 2rem;
+  }
 
-.product-sliding-header {
-    font-size: 28px;
-    text-transform: uppercase;
-    color: #313131;
+  .visioninsurance h3 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .visioninsurance span {
     text-align: center;
-    
-}
+  }
 
-.product-box {
+  .giveapair {
     display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding: 15px;
-    /*border: 1px solid black;*/
-    border-radius: 10px;
-    margin: 0px 20px;
-    position: relative;
-}
-
-.p-img-container {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    overflow: hidden;
-
-}
-
-.p-img a,
-.p-img{
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-.p-img a img {
-    width: 100%;
-    height: 100%;
-    object-position: center;
-    object-fit: contain;
-    animation: fade 0.6s;
-}
-
-.p-img-angle {
-    display: none;
-}
-
-.p-img-container:hover .p-img-angle {
-    display: block;
-}
-
-.p-img-container:hover .p-img-front {
-    display: none;
-}
-
-@keyframes fade{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-
-}
-
-.p-box-text {
-    margin-top: 5px;
-    width: 100%;
-
-}
-
-.product-title {
-    display: flex;
-    justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
-}
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 25rem;
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+  }
 
-.product-title span{
-    color: black;
-    font-size: 1.2rem;
-    padding-left: 1rem;
-}
+  .giveapair h3 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+  }
 
-.product-title{
-    color: #333333;
-    font-weight: 600;
-    text-decoration: none;
-}
+  .giveapair span {
+    text-align: center;
+  }
 
-.product-title:hover{
-    color: #111111;
-    opacity: .5;
-    transition: all ease .3s;
-}
+  .charityimgs {
+    display: flex;
+    justify-content: space-around;
+    height: 50rem;
+    width: 100%;
+  }
 
-.product
+  .charityimgs img {
+    width: 28rem;
+    height: 35rem;
+    filter: drop-shadow(0 0 0.08rem gray);
+  }
 
+  .leftimg {
+    padding-top: 5rem;
+  }
 
-
-
-
-
-
-
-
-/* v Copied code for slider and editted it to fit v */
-/*
-*,
-*:after,
-*:before {
-	box-sizing: border-box;
-}
-
-
-.container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-    padding-top: 2.5%;
-}
-
-.tabs {
-	display: flex;
-	position: relative;
-	background-color: #F8F8F8;
-	box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
-	padding: 0.75rem;
-	border-radius: 99px; // just a high number to create pill effect
-	
-}
-
-input[type="radio"] {
-	display: none;
-}
-
-.tab {
-    position: relative;
-    z-index: 2;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 54px;
-	width: 200px;
-	font-size: 1.25rem;
-	font-weight: 500;
-	border-radius: 99px; // just a high number to create pill effect
-	cursor: pointer;
-	transition: color 0.15s ease-in;
-}
-
-
-
-input[id="radio-2"] {
-	&:checked {
-		& ~ .glider {
-			transform: translateX(100%);
-		}
-	}
-}
-
-.glider {
-	position: absolute;
-	display: flex;
-	height: 3.375rem;
-	width: 12.5rem;
-	background-color: #FFF ;
-	z-index: 1;
-	border-radius: 99px; // just a high number to create pill effect
-	transition: 0.25s ease-out;
-    box-shadow: .2rem .2rem .3rem lightgray;
-}
-
-@media (max-width: 700px) {
-	.tabs {
-		transform: scale(0.6);
-	}
-}
-
-/* ^Copied Code^ */
-*/
-
-
+  .rightimg {
+    padding-top: 5rem;
+  }
+  
